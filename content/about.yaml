@@ -1,0 +1,52 @@
+about:
+  title: "Tentang DevOps Jogja"
+  description: "DevOps Jogja adalah komunitas para praktisi DevOps, Site Reliability Engineers, Platform Engineers, dan Infrastructure Engineers di Yogyakarta dan sekitarnya. Kami berkomitmen untuk membangun ekosistem teknologi yang kuat melalui sharing knowledge, networking, dan kolaborasi."
+
+  mission: "Menjadi wadah pembelajaran dan kolaborasi bagi para praktisi DevOps di Yogyakarta untuk saling berbagi pengetahuan, pengalaman, dan best practices dalam membangun infrastruktur teknologi yang reliable, scalable, dan secure."
+
+  vision: "Menjadi komunitas DevOps terdepan di Indonesia yang menghasilkan talenta-talenta berkualitas tinggi dan berkontribusi pada kemajuan industri teknologi nasional."
+
+  contact:
+    email: "devopsjogja@gmail.com"
+    telegram: "@devopsjogja"
+    github: "devops-jogja"
+
+  founding_year: 2021
+
+  values:
+  - title: "Knowledge Sharing"
+    description: "Kami percaya bahwa knowledge yang dibagikan akan berkembang dan menguntungkan semua pihak."
+
+  - title: "Collaboration"
+    description: "Membangun budaya kolaborasi yang kuat antara developer, operations, dan security teams."
+
+  - title: "Continuous Learning"
+    description: "Teknologi terus berkembang, dan kami berkomitmen untuk terus belajar dan beradaptasi."
+
+  - title: "Community First"
+    description: "Mengutamakan kepentingan komunitas dan pertumbuhan bersama di atas kepentingan individu."
+
+  activities:
+  - "Monthly Meetups & Tech Talks"
+  - "Hands-on Workshops & Training"
+  - "Study Groups & Book Clubs"
+  - "Open Source Project Collaboration"
+  - "Job Referral & Career Mentoring"
+  - "Conference & Event Organizing"
+
+  achievements:
+  - milestone: "500+ Active Members"
+    year: 2024
+    description: "Komunitas yang terdiri dari berbagai background dan level experience"
+
+  - milestone: "50+ Events Organized"
+    year: 2023
+    description: "Berbagai workshop, meetup, dan conference yang telah diselenggarakan"
+
+  - milestone: "100+ Knowledge Shared"
+    year: 2022
+    description: "Artikel, tutorial, dan materi pembelajaran yang telah diproduksi"
+
+  - milestone: "Community Established"
+    year: 2021
+    description: "Berdirinya DevOps Jogja sebagai komunitas resmi di Yogyakarta"

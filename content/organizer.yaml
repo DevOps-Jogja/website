@@ -1,0 +1,18 @@
+organizers:
+- name: "Fadilah Ricky"
+  role: "Founder"
+  bio: "DevOps Engineer at Atmatech with a passion for community building and knowledge sharing. Experienced in cloud infrastructure and automation."
+  photo: "test.jpg"
+  social:
+    github: " "
+    linkedin: " "
+    twitter: " "
+
+- name: "Husni"
+  role: "Lead Organizer"
+  bio: "SRE at Accelbyte, focusing on DevOps practices and community engagement. Loves to mentor and share insights on cloud technologies."
+  photo: "test.jpg"
+  social:
+    github: " "
+    linkedin: " "
+    twitter: " "
