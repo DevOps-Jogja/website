@@ -9,6 +9,7 @@ ENV FLASK_ENV=production
 
 # Set work directory
 WORKDIR /app
+COPY . .
 
 # Install system dependencies
 RUN apt-get update \
@@ -21,8 +22,6 @@ RUN apt-get update \
 RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - \
     && apt-get install -y nodejs
 
-# Copy requirements first for better caching
-COPY requirements.txt .
 
 # Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
