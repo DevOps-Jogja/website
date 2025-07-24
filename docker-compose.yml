@@ -11,3 +11,15 @@ services:
       - /app/node_modules
     command: python app.py
 
+  production:
+    build: .
+    ports:
+      - "5000:3000"
+    environment:
+      - FLASK_ENV=production
+      - FLASK_DEBUG=0
+    volumes:
+      - .:/app
+      - /app/node_modules
+    command: python app.py
+
