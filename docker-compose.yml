@@ -2,7 +2,7 @@ services:
   web:
     build: .
     ports:
-      - "5000:5000"
+      - "5000:3000"
     environment:
       - FLASK_ENV=development
       - FLASK_DEBUG=1
