@@ -9,7 +9,7 @@ featured_image: "docker-tutorial.jpg"
 
 # Pengenalan Docker untuk DevOps Engineer
 
-Docker telah menjadi salah satu teknologi fundamental dalam ekosistem DevOps modern. Sebagai platform containerization, Docker memungkinkan kita untuk mengemas aplikasi beserta dependencies-nya ke dalam container yang dapat dijalankan di berbagai environment.
+Docker telah menjadi salah satu teknologi fundamental dalam ekosistem DevOps modern. Sebagai platform containerization, Docker memungkinkan kita untuk mengemas aplikasi beserta dependencies-nya ke dalam container yang dapat dijalankan di berbagai environment.....
 
 ## Apa itu Docker?
 

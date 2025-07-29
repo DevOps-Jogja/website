@@ -22,5 +22,5 @@ services:
     volumes:
       - .:/app
       - /app/node_modules
-    command: python app.py
+
 
