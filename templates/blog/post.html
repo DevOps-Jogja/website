@@ -10,16 +10,15 @@
 {% block content %}
 <!-- Article Header -->
 <article class="bg-gray-900">
-    <!-- Featured Image -->
-    {% if post.featured_image %}
-    {% set image_path = post.featured_image | get_image('blog') %}
-    <div class="w-full h-64 md:h-96 bg-gray-700 bg-cover bg-center"
-        style="background-image: url('{{ url_for('static', filename='images/blog/' + image_path) }}');">
-    </div>
-    {% endif %}
-
     <!-- Article Content -->
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <!-- Featured Image -->
+        {% if post.featured_image %}
+        {% set image_path = post.featured_image | get_image('blog') %}
+        <div class="w-full h-64 md:h-96 bg-gray-700 bg-cover bg-center rounded-lg mb-8"
+            style="background-image: url('{{ url_for('static', filename='images/blog/' + image_path) }}');">
+        </div>
+        {% endif %}
         <!-- Article Meta -->
         <div class="mb-8">
             <div class="flex items-center space-x-4 text-gray-400 text-sm mb-4">
