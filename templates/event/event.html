@@ -27,7 +27,7 @@
             <!-- Featured Image - Inline with content -->
             {% if event.featured_image %}
             {% set image_path = event.featured_image | get_image('event') %}
-            <div class="w-full md:w-2/3 lg:w-1/2 aspect-[4/3] bg-gray-700 bg-cover bg-center rounded-lg mb-8"
+            <div class="aspect-4-5 bg-gray-700 bg-cover bg-center rounded-lg mb-8"
                 style="background-image: url('{{ url_for('static', filename='images/event/' + image_path) }}');">
             </div>
             {% endif %}
@@ -161,4 +161,9 @@
         </div>
     </div>
 </section>
+{% endblock %}
+
+{% block extra_css %}
+<!-- Homepage specific styles -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/homepage.css') }}">
 {% endblock %}

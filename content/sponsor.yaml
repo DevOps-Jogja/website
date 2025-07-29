@@ -29,3 +29,8 @@ sponsors:
   alt: "Hostinger"
   url: "https://www.hostinger.com"
   active: true
+- name: "Berijalan"
+  logo: "berijalan.png"
+  alt: "Berijalan"
+  url: "https://berijalan.co.id"
+  active: true

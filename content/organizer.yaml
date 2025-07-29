@@ -1,18 +1,63 @@
 organizers:
 - name: "Fadilah Ricky"
-  role: "Founder"
-  bio: "DevOps Engineer at Atmatech with a passion for community building and knowledge sharing. Experienced in cloud infrastructure and automation."
-  photo: "test.jpg"
+  role: "Founder Organizer"
+  bio: "DevOps Engineer"
+  photo: "fadil.png"
   social:
-    github: " "
-    linkedin: " "
+    github: "itsmefdil"
+    linkedin: "itsmefdil"
     twitter: " "
 
-- name: "Husni"
+- name: "Husni Zuhdi"
   role: "Lead Organizer"
-  bio: "SRE at Accelbyte, focusing on DevOps practices and community engagement. Loves to mentor and share insights on cloud technologies."
-  photo: "test.jpg"
+  bio: "SRE at Accelbyte"
+  photo: "husni.png"
   social:
     github: " "
-    linkedin: " "
+    linkedin: "husni-naufal-zuhdi"
+    twitter: " "
+
+- name: "Renaldy Gatan Pramana"
+  role: "Organizer"
+  bio: "Sysadmin at Vascomm"
+  photo: "gatan.png"
+  social:
+    github: " "
+    linkedin: "renaldygatan"
+    twitter: " "
+
+- name: "Fauzi Anggoro "
+  role: "Organizer"
+  bio: "Service Advisor at Isotronik"
+  photo: "fauzi.png"
+  social:
+    github: " "
+    linkedin: "fauzianggoro"
+    twitter: " "
+
+- name: "Reza Febriansyah"
+  role: "Organizer"
+  bio: "Fullstack Engineer at Frontier"
+  photo: "reza.png"
+  social:
+    github: " "
+    linkedin: "reza-f-961964127"
+    twitter: " "
+
+- name: "Ilham Riky Rismawan"
+  role: "Organizer"
+  bio: "DevOps Engineer at Doitpay"
+  photo: "riky.png"
+  social:
+    github: " "
+    linkedin: "ilham-riky-rismawan-59273b248"
+    twitter: " "
+
+- name: "Indrarisa Pradana"
+  role: "Organizer"
+  bio: "SRE at Hostinger"
+  photo: "indra.png"
+  social:
+    github: " "
+    linkedin: "indrarisa-pradana"
     twitter: " "
