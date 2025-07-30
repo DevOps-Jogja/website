@@ -35,6 +35,15 @@ organizers:
     linkedin: "fauzianggoro"
     twitter: " "
 
+- name: "Nizar Akbar Meilani"
+  role: "Organizer"
+  bio: "Linux System Administrator at Domainesia"
+  photo: "nizar.png"
+  social:
+    github: " "
+    linkedin: "nizarakbarm"
+    twitter: " "
+
 - name: "Reza Febriansyah"
   role: "Organizer"
   bio: "Fullstack Engineer at Frontier"
