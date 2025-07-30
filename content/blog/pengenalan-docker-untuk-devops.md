@@ -4,7 +4,7 @@ date: "2024-07-20"
 author: "DevOps Jogja"
 excerpt: "Pelajari dasar-dasar Docker dan bagaimana menggunakannya dalam workflow DevOps untuk containerization dan deployment yang efisien."
 tags: ["Docker", "DevOps", "Containerization", "Tutorial"]
-featured_image: "docker-tutorial.jpg"
+featured_image: "pengenalan-docker.png"
 ---
 
 # Pengenalan Docker untuk DevOps Engineer
