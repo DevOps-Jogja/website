@@ -2,7 +2,7 @@
 
 Modern community website untuk DevOps Jogja yang dibangun dengan Flask dan Tailwind CSS.
 
-![DevOps Jogja](static/images/banner.jpg)
+![DevOps Jogja](static/images/cover.png)
 
 ## 🚀 Features
 
