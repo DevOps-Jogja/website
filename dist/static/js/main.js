@@ -364,3 +364,73 @@ function fallbackCopyTextToClipboard(text) {
 
     document.body.removeChild(textArea);
 }
+
+// Copy to clipboard function for sharing
+function copyToClipboard(text) {
+    if (navigator.clipboard) {
+        navigator.clipboard.writeText(text).then(function() {
+            // Show success feedback
+            showCopyFeedback('Link copied to clipboard!');
+        }, function(err) {
+            console.error('Could not copy text: ', err);
+            fallbackCopyTextToClipboard(text);
+        });
+    } else {
+        fallbackCopyTextToClipboard(text);
+    }
+}
+
+// Fallback function for older browsers
+function fallbackCopyTextToClipboard(text) {
+    const textArea = document.createElement("textarea");
+    textArea.value = text;
+    
+    // Avoid scrolling to bottom
+    textArea.style.top = "0";
+    textArea.style.left = "0";
+    textArea.style.position = "fixed";
+    
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+    
+    try {
+        const successful = document.execCommand('copy');
+        if (successful) {
+            showCopyFeedback('Link copied to clipboard!');
+        } else {
+            showCopyFeedback('Failed to copy link', 'error');
+        }
+    } catch (err) {
+        console.error('Fallback: Unable to copy', err);
+        showCopyFeedback('Failed to copy link', 'error');
+    }
+    
+    document.body.removeChild(textArea);
+}
+
+// Show copy feedback message
+function showCopyFeedback(message, type = 'success') {
+    // Remove existing feedback if any
+    const existingFeedback = document.querySelector('.copy-feedback');
+    if (existingFeedback) {
+        existingFeedback.remove();
+    }
+    
+    // Create feedback element
+    const feedback = document.createElement('div');
+    feedback.className = `copy-feedback fixed bottom-4 right-4 px-4 py-2 rounded-lg shadow-lg z-50 transition-all duration-300 transform translate-y-0 ${type === 'error' ? 'bg-red-500 text-white' : 'bg-green-500 text-white'}`;
+    feedback.textContent = message;
+    
+    document.body.appendChild(feedback);
+    
+    // Auto remove after 3 seconds
+    setTimeout(() => {
+        feedback.style.transform = 'translate-y-full opacity-0';
+        setTimeout(() => {
+            if (feedback.parentNode) {
+                feedback.parentNode.removeChild(feedback);
+            }
+        }, 300);
+    }, 3000);
+}

@@ -32,7 +32,7 @@ class StaticSiteBuilder:
         self.app = Flask(__name__)
         
         # Configure Flask for URL generation
-        self.app.config['SERVER_NAME'] = 'localhost'
+        self.app.config['SERVER_NAME'] = 'devopsjogja.com'  # Update with your domain
         self.app.config['APPLICATION_ROOT'] = '/'
         self.app.config['PREFERRED_URL_SCHEME'] = 'https'
         
@@ -73,6 +73,10 @@ class StaticSiteBuilder:
         
         # Add url_for to Jinja2 globals
         self.app.jinja_env.globals['url_for'] = static_url_for
+        
+        # Add base URL for sharing
+        base_url = f"{self.app.config['PREFERRED_URL_SCHEME']}://{self.app.config['SERVER_NAME']}"
+        self.app.jinja_env.globals['base_url'] = base_url
         
         @self.app.template_filter("date")
         def date_filter(value, format="%Y"):
@@ -238,6 +242,9 @@ class StaticSiteBuilder:
                 
                 gallery_images = self.get_gallery_images()
                 
+                # Add current_url for sharing
+                current_url = f"{self.app.jinja_env.globals['base_url']}/"
+                
                 html = render_template(
                     "index.html",
                     latest_blogs=latest_blogs,
@@ -245,6 +252,7 @@ class StaticSiteBuilder:
                     latest_events=latest_events,
                     sponsors=active_sponsors,
                     gallery_images=gallery_images,
+                    current_url=current_url,
                 )
                 
                 self.save_page(html, "index.html")
@@ -255,12 +263,14 @@ class StaticSiteBuilder:
             with self.app.test_request_context():
                 # Blog index page
                 blog_posts = self.markdown_parser.get_all_posts("content/blog")
-                html = render_template("blog/index.html", posts=blog_posts)
+                current_url = f"{self.app.jinja_env.globals['base_url']}/blog/"
+                html = render_template("blog/index.html", posts=blog_posts, current_url=current_url)
                 self.save_page(html, "blog/index.html")
                 
                 # Individual blog posts
                 for post in blog_posts:
-                    html = render_template("blog/post.html", post=post)
+                    current_url = f"{self.app.jinja_env.globals['base_url']}/blog/{post['slug']}/"
+                    html = render_template("blog/post.html", post=post, current_url=current_url)
                     self.save_page(html, f"blog/{post['slug']}/index.html")
 
     def build_event_pages(self):
@@ -269,12 +279,14 @@ class StaticSiteBuilder:
             with self.app.test_request_context():
                 # Event index page
                 events = self.markdown_parser.get_all_posts("content/event")
-                html = render_template("event/index.html", events=events)
+                current_url = f"{self.app.jinja_env.globals['base_url']}/event/"
+                html = render_template("event/index.html", events=events, current_url=current_url)
                 self.save_page(html, "event/index.html")
                 
                 # Individual event pages
                 for event in events:
-                    html = render_template("event/event.html", event=event)
+                    current_url = f"{self.app.jinja_env.globals['base_url']}/event/{event['slug']}/"
+                    html = render_template("event/event.html", event=event, current_url=current_url)
                     self.save_page(html, f"event/{event['slug']}/index.html")
 
     def build_other_pages(self):
@@ -283,12 +295,14 @@ class StaticSiteBuilder:
             with self.app.test_request_context():
                 # About page
                 about_data = self.yaml_loader.load_yaml("content/about.yaml")
-                html = render_template("about.html", data=about_data)
+                current_url = f"{self.app.jinja_env.globals['base_url']}/about/"
+                html = render_template("about.html", data=about_data, current_url=current_url)
                 self.save_page(html, "about/index.html")
                 
                 # Organizer page
                 organizer_data = self.yaml_loader.load_yaml("content/organizer.yaml")
-                html = render_template("organizer.html", data=organizer_data)
+                current_url = f"{self.app.jinja_env.globals['base_url']}/organizer/"
+                html = render_template("organizer.html", data=organizer_data, current_url=current_url)
                 self.save_page(html, "organizer/index.html")
 
     def build_error_pages(self):
@@ -319,7 +333,7 @@ class StaticSiteBuilder:
 
     def build_sitemap(self):
         """Generate sitemap.xml for SEO"""
-        base_url = "https://devopsjogja.org"  # Update with your domain
+        base_url = "https://devopsjogja.com"  # Update with your domain
         
         urls = [
             {"url": "/", "priority": "1.0"},
