@@ -203,6 +203,7 @@ def index():
         latest_events=latest_events,
         sponsors=active_sponsors,
         gallery_images=gallery_images,
+        current_page="index",
     )
 
 
@@ -210,7 +211,9 @@ def index():
 def blog_index():
     """Blog listing page"""
     blog_posts = markdown_parser.get_all_posts("content/blog")
-    return render_template("blog/index.html", posts=blog_posts)
+    return render_template(
+        "blog/index.html", posts=blog_posts, current_page="blog_index"
+    )
 
 
 @app.route("/blog/<slug>")
@@ -219,14 +222,16 @@ def blog_post(slug):
     post = markdown_parser.get_post_by_slug("content/blog", slug)
     if not post:
         abort(404)
-    return render_template("blog/post.html", post=post)
+    return render_template("blog/post.html", post=post, current_page="blog_post")
 
 
 @app.route("/event")
 def event_index():
     """Event listing page"""
     events = markdown_parser.get_all_posts("content/event")
-    return render_template("event/index.html", events=events)
+    return render_template(
+        "event/index.html", events=events, current_page="event_index"
+    )
 
 
 @app.route("/event/<slug>")
@@ -235,21 +240,23 @@ def event_detail(slug):
     event = markdown_parser.get_post_by_slug("content/event", slug)
     if not event:
         abort(404)
-    return render_template("event/event.html", event=event)
+    return render_template("event/event.html", event=event, current_page="event_detail")
 
 
 @app.route("/organizer")
 def organizer():
     """Organizer profiles page"""
     organizer_data = yaml_loader.load_yaml("content/organizer.yaml")
-    return render_template("organizer.html", data=organizer_data)
+    return render_template(
+        "organizer.html", data=organizer_data, current_page="organizer"
+    )
 
 
 @app.route("/about")
 def about():
     """About page"""
     about_data = yaml_loader.load_yaml("content/about.yaml")
-    return render_template("about.html", data=about_data)
+    return render_template("about.html", data=about_data, current_page="about")
 
 
 @app.errorhandler(404)

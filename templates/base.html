@@ -66,24 +66,22 @@
 
                 <!-- Desktop Menu - Centered -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="{{ url_for('index') }}"
-                        class="nav-link {% if request.endpoint == 'index' %}active{% endif %}">
+                    <a href="{{ url_for('index') }}" class="nav-link {% if current_page == 'index' %}active{% endif %}">
                         Home
                     </a>
                     <a href="{{ url_for('blog_index') }}"
-                        class="nav-link {% if request.endpoint and request.endpoint.startswith('blog') %}active{% endif %}">
+                        class="nav-link {% if current_page and current_page.startswith('blog') %}active{% endif %}">
                         Blog
                     </a>
                     <a href="{{ url_for('event_index') }}"
-                        class="nav-link {% if request.endpoint and request.endpoint.startswith('event') %}active{% endif %}">
+                        class="nav-link {% if current_page and current_page.startswith('event') %}active{% endif %}">
                         Event
                     </a>
                     <a href="{{ url_for('organizer') }}"
-                        class="nav-link {% if request.endpoint == 'organizer' %}active{% endif %}">
+                        class="nav-link {% if current_page == 'organizer' %}active{% endif %}">
                         Organizer
                     </a>
-                    <a href="{{ url_for('about') }}"
-                        class="nav-link {% if request.endpoint == 'about' %}active{% endif %}">
+                    <a href="{{ url_for('about') }}" class="nav-link {% if current_page == 'about' %}active{% endif %}">
                         About
                     </a>
                 </div>
@@ -111,11 +109,16 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="md:hidden hidden bg-gray-900/90 backdrop-blur-md border-t border-gray-700/50">
             <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="{{ url_for('index') }}" class="mobile-nav-link">Home</a>
-                <a href="{{ url_for('blog_index') }}" class="mobile-nav-link">Blog</a>
-                <a href="{{ url_for('event_index') }}" class="mobile-nav-link">Event</a>
-                <a href="{{ url_for('organizer') }}" class="mobile-nav-link">Organizer</a>
-                <a href="{{ url_for('about') }}" class="mobile-nav-link">About</a>
+                <a href="{{ url_for('index') }}"
+                    class="mobile-nav-link {% if current_page == 'index' %}text-blue-400{% endif %}">Home</a>
+                <a href="{{ url_for('blog_index') }}"
+                    class="mobile-nav-link {% if current_page and current_page.startswith('blog') %}text-blue-400{% endif %}">Blog</a>
+                <a href="{{ url_for('event_index') }}"
+                    class="mobile-nav-link {% if current_page and current_page.startswith('event') %}text-blue-400{% endif %}">Event</a>
+                <a href="{{ url_for('organizer') }}"
+                    class="mobile-nav-link {% if current_page == 'organizer' %}text-blue-400{% endif %}">Organizer</a>
+                <a href="{{ url_for('about') }}"
+                    class="mobile-nav-link {% if current_page == 'about' %}text-blue-400{% endif %}">About</a>
                 <a href="https://t.me/devopsjogja" target="_blank" class="mobile-nav-link">Join Telegram</a>
             </div>
         </div>

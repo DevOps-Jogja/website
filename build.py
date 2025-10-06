@@ -253,6 +253,7 @@ class StaticSiteBuilder:
                     sponsors=active_sponsors,
                     gallery_images=gallery_images,
                     current_url=current_url,
+                    current_page="index",
                 )
                 
                 self.save_page(html, "index.html")
@@ -264,13 +265,13 @@ class StaticSiteBuilder:
                 # Blog index page
                 blog_posts = self.markdown_parser.get_all_posts("content/blog")
                 current_url = f"{self.app.jinja_env.globals['base_url']}/blog/"
-                html = render_template("blog/index.html", posts=blog_posts, current_url=current_url)
+                html = render_template("blog/index.html", posts=blog_posts, current_url=current_url, current_page="blog_index")
                 self.save_page(html, "blog/index.html")
                 
                 # Individual blog posts
                 for post in blog_posts:
                     current_url = f"{self.app.jinja_env.globals['base_url']}/blog/{post['slug']}/"
-                    html = render_template("blog/post.html", post=post, current_url=current_url)
+                    html = render_template("blog/post.html", post=post, current_url=current_url, current_page="blog_post")
                     self.save_page(html, f"blog/{post['slug']}/index.html")
 
     def build_event_pages(self):
@@ -280,13 +281,13 @@ class StaticSiteBuilder:
                 # Event index page
                 events = self.markdown_parser.get_all_posts("content/event")
                 current_url = f"{self.app.jinja_env.globals['base_url']}/event/"
-                html = render_template("event/index.html", events=events, current_url=current_url)
+                html = render_template("event/index.html", events=events, current_url=current_url, current_page="event_index")
                 self.save_page(html, "event/index.html")
                 
                 # Individual event pages
                 for event in events:
                     current_url = f"{self.app.jinja_env.globals['base_url']}/event/{event['slug']}/"
-                    html = render_template("event/event.html", event=event, current_url=current_url)
+                    html = render_template("event/event.html", event=event, current_url=current_url, current_page="event_detail")
                     self.save_page(html, f"event/{event['slug']}/index.html")
 
     def build_other_pages(self):
@@ -296,13 +297,13 @@ class StaticSiteBuilder:
                 # About page
                 about_data = self.yaml_loader.load_yaml("content/about.yaml")
                 current_url = f"{self.app.jinja_env.globals['base_url']}/about/"
-                html = render_template("about.html", data=about_data, current_url=current_url)
+                html = render_template("about.html", data=about_data, current_url=current_url, current_page="about")
                 self.save_page(html, "about/index.html")
                 
                 # Organizer page
                 organizer_data = self.yaml_loader.load_yaml("content/organizer.yaml")
                 current_url = f"{self.app.jinja_env.globals['base_url']}/organizer/"
-                html = render_template("organizer.html", data=organizer_data, current_url=current_url)
+                html = render_template("organizer.html", data=organizer_data, current_url=current_url, current_page="organizer")
                 self.save_page(html, "organizer/index.html")
 
     def build_error_pages(self):

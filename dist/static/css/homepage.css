@@ -311,7 +311,7 @@
    ======================================== */
 
 .speaker-cta {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background:  rgba(255, 255, 255, 0.1);
     position: relative;
     overflow: hidden;
 }
@@ -329,15 +329,15 @@
 
 .speaker-card {
     backdrop-filter: blur(10px);
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(155, 10, 10, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 .speaker-button {
-    background: linear-gradient(45deg, #8b5cf6, #7c3aed);
+    background:  rgba(255, 255, 255, 0.1);
     color: white;
-    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+    box-shadow: 0 4px 15px rgba(30, 17, 62, 0.3);
     transition: all 0.3s ease;
     border: none;
     text-decoration: none;
@@ -345,8 +345,8 @@
 
 .speaker-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.4);
-    background: linear-gradient(45deg, #7c3aed, #6d28d9);
+    box-shadow: 0 8px 25px rgba(21, 171, 236, 0.4);
+    background: #3b82f6;
     color: white;
     text-decoration: none;
 }
