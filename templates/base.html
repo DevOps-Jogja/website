@@ -109,11 +109,16 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="md:hidden hidden bg-gray-900/90 backdrop-blur-md border-t border-gray-700/50">
             <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="{{ url_for('index') }}" class="mobile-nav-link {% if current_page == 'index' %}text-blue-400{% endif %}">Home</a>
-                <a href="{{ url_for('blog_index') }}" class="mobile-nav-link {% if current_page and current_page.startswith('blog') %}text-blue-400{% endif %}">Blog</a>
-                <a href="{{ url_for('event_index') }}" class="mobile-nav-link {% if current_page and current_page.startswith('event') %}text-blue-400{% endif %}">Event</a>
-                <a href="{{ url_for('organizer') }}" class="mobile-nav-link {% if current_page == 'organizer' %}text-blue-400{% endif %}">Organizer</a>
-                <a href="{{ url_for('about') }}" class="mobile-nav-link {% if current_page == 'about' %}text-blue-400{% endif %}">About</a>
+                <a href="{{ url_for('index') }}"
+                    class="mobile-nav-link {% if current_page == 'index' %}text-blue-400{% endif %}">Home</a>
+                <a href="{{ url_for('blog_index') }}"
+                    class="mobile-nav-link {% if current_page and current_page.startswith('blog') %}text-blue-400{% endif %}">Blog</a>
+                <a href="{{ url_for('event_index') }}"
+                    class="mobile-nav-link {% if current_page and current_page.startswith('event') %}text-blue-400{% endif %}">Event</a>
+                <a href="{{ url_for('organizer') }}"
+                    class="mobile-nav-link {% if current_page == 'organizer' %}text-blue-400{% endif %}">Organizer</a>
+                <a href="{{ url_for('about') }}"
+                    class="mobile-nav-link {% if current_page == 'about' %}text-blue-400{% endif %}">About</a>
                 <a href="https://t.me/devopsjogja" target="_blank" class="mobile-nav-link">Join Telegram</a>
             </div>
         </div>
