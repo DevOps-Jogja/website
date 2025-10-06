@@ -67,23 +67,23 @@
                 <!-- Desktop Menu - Centered -->
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="{{ url_for('index') }}"
-                        class="nav-link {% if request.endpoint == 'index' %}active{% endif %}">
+                        class="nav-link {% if current_page == 'index' %}active{% endif %}">
                         Home
                     </a>
                     <a href="{{ url_for('blog_index') }}"
-                        class="nav-link {% if request.endpoint and request.endpoint.startswith('blog') %}active{% endif %}">
+                        class="nav-link {% if current_page and current_page.startswith('blog') %}active{% endif %}">
                         Blog
                     </a>
                     <a href="{{ url_for('event_index') }}"
-                        class="nav-link {% if request.endpoint and request.endpoint.startswith('event') %}active{% endif %}">
+                        class="nav-link {% if current_page and current_page.startswith('event') %}active{% endif %}">
                         Event
                     </a>
                     <a href="{{ url_for('organizer') }}"
-                        class="nav-link {% if request.endpoint == 'organizer' %}active{% endif %}">
+                        class="nav-link {% if current_page == 'organizer' %}active{% endif %}">
                         Organizer
                     </a>
                     <a href="{{ url_for('about') }}"
-                        class="nav-link {% if request.endpoint == 'about' %}active{% endif %}">
+                        class="nav-link {% if current_page == 'about' %}active{% endif %}">
                         About
                     </a>
                 </div>
