@@ -211,7 +211,9 @@ def index():
 def blog_index():
     """Blog listing page"""
     blog_posts = markdown_parser.get_all_posts("content/blog")
-    return render_template("blog/index.html", posts=blog_posts, current_page="blog_index")
+    return render_template(
+        "blog/index.html", posts=blog_posts, current_page="blog_index"
+    )
 
 
 @app.route("/blog/<slug>")
@@ -227,7 +229,9 @@ def blog_post(slug):
 def event_index():
     """Event listing page"""
     events = markdown_parser.get_all_posts("content/event")
-    return render_template("event/index.html", events=events, current_page="event_index")
+    return render_template(
+        "event/index.html", events=events, current_page="event_index"
+    )
 
 
 @app.route("/event/<slug>")
@@ -243,7 +247,9 @@ def event_detail(slug):
 def organizer():
     """Organizer profiles page"""
     organizer_data = yaml_loader.load_yaml("content/organizer.yaml")
-    return render_template("organizer.html", data=organizer_data, current_page="organizer")
+    return render_template(
+        "organizer.html", data=organizer_data, current_page="organizer"
+    )
 
 
 @app.route("/about")
