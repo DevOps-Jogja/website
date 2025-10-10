@@ -34,3 +34,8 @@ sponsors:
   alt: "Berijalan"
   url: "https://berijalan.co.id"
   active: true
+- name: "Huawei Cloud"
+  logo: "huawei_cloud.png"
+  alt: "Huawei Cloud"
+  url: "https://www.huaweicloud.com"
+  active: true
