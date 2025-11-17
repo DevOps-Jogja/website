@@ -44,9 +44,9 @@ RUN npm install
 RUN npm run build-css-prod
 
 # Create non-root user
-# RUN adduser --disabled-password --gecos '' appuser \
-#     && chown -R appuser:appuser /app
-# USER appuser
+RUN adduser --disabled-password --gecos '' appuser \
+    && chown -R appuser:appuser /app
+USER appuser
 
 # Place executables in the environment at the front of the path
 ENV PATH="/app/.venv/bin:$PATH"
