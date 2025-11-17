@@ -41,10 +41,7 @@ npm run build-css-prod
 ### Running the Application
 ```bash
 # Development (port 3000, debug mode)
-python app.py
-
-# Flask CLI alternative
-export FLASK_APP=app.py && flask run
+uv run app.py
 ```
 
 ## Project-Specific Conventions
@@ -79,7 +76,7 @@ export FLASK_APP=app.py && flask run
 
 ### Port Configuration
 - Development: Port 3000 (`python app.py`)
-- Production: Port 5000 (Docker container)
+- Production: Port 3000 (Docker container)
 - Flask runs with `host="0.0.0.0"` for container compatibility
 
 ### Directory Auto-Creation
