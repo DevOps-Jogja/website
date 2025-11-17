@@ -60,7 +60,7 @@ install_deps() {
     
     # Install Python dependencies
     print_status "Installing Python dependencies..."
-    pip3 install -r requirements.txt
+    uv sync --locked
     
     # Install Node.js dependencies
     print_status "Installing Node.js dependencies..."

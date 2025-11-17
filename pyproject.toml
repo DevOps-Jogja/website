@@ -1,0 +1,15 @@
+[project]
+name = "website"
+version = "1.0.0"
+description = "Modern community website untuk DevOps Jogja yang dibangun dengan Flask dan Tailwind CSS"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "flask==2.3.3",
+    "markdown==3.5.1",
+    "pillow>=10.1",
+    "pillow-heif==0.13.0",
+    "pygments==2.16.1",
+    "python-dateutil==2.8.2",
+    "pyyaml==6.0.1",
+]

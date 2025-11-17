@@ -2,14 +2,13 @@ services:
   web:
     build: .
     ports:
-      - "5000:3000"
+      - "3000:3000"
     environment:
       - FLASK_ENV=development
       - FLASK_DEBUG=1
     volumes:
       - .:/app
       - /app/node_modules
-    command: python app.py
 
   production:
     build: .

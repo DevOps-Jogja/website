@@ -1,50 +1,42 @@
-# DevOps Jogja Community Website
+# Website Komunitas DevOps Jogja
 
-Modern community website untuk DevOps Jogja yang dibangun dengan Flask dan Tailwind CSS.
+Website komunitas modern untuk DevOps Jogja yang dibangun dengan Flask dan Tailwind CSS.
 
 ![DevOps Jogja](static/images/cover.png)
 
-## 🚀 Features
+## 🚀 Fitur
 
-- **Modern Homepage** - Berkesan teknologi infrastruktur dengan design responsif
-- **Blog System** - Artikel teknologi dari file Markdown
+- **Modern Homepage** - Kesan teknologi infrastruktur dengan design responsif
+- **Blog System** - Artikel dan blog teknologi dari file Markdown
 - **Event Management** - Informasi event dari file Markdown
 - **Organizer Profiles** - Profil pengurus dari file YAML
 - **About Page** - Informasi komunitas dari file YAML
 - **Responsive Design** - Menggunakan Tailwind CSS
 
-## 📋 Prerequisites
+## 📋 Pra-syarat
 
-- Python 3.8+
+- Python 3.11+
+- uv 0.7+
 - Node.js 14+
 - npm atau yarn
 
-## 🛠️ Installation
+## 🛠️ Instalasi
 
-### 1. Clone Repository
+### 1. Kloning Repositori
 
 ```bash
 git clone https://github.com/devops-jogja/devops-jogja-website.git
 cd devops-jogja-website
 ```
 
-### 2. Setup Python Environment
+### 2. Siapkan 'environment' python
 
 ```bash
-# Buat virtual environment
-python -m venv venv
-
-# Aktivasi virtual environment
-# Di macOS/Linux:
-source venv/bin/activate
-# Di Windows:
-# venv\Scripts\activate
-
-# Install dependencies
-pip install -r requirements.txt
+# Sync 'environment' dengan uv
+uv sync --locked
 ```
 
-### 3. Setup Tailwind CSS
+### 3. Siapkan Tailwind CSS
 
 ```bash
 # Install Node.js dependencies
@@ -57,25 +49,20 @@ npm run build-css
 ### 4. Jalankan Aplikasi
 
 ```bash
-# Development mode
-python app.py
-
-# Atau dengan Flask CLI
-export FLASK_APP=app.py
-export FLASK_ENV=development
-flask run
+# Dengan uv
+uv run app.py
 ```
 
-Website akan berjalan di `http://localhost:5000`
+Website akan berjalan di `http://localhost:3000`
 
 ## 📁 Struktur Project
 
 ```
 devops-jogja-website/
 ├── app.py                 # Main Flask application
-├── requirements.txt       # Python dependencies
-├── package.json          # Node.js dependencies
-├── tailwind.config.js    # Tailwind configuration
+├── pyproject.toml         # Python dependencies
+├── package.json           # Node.js dependencies
+├── tailwind.config.js     # Tailwind configuration
 ├── static/
 │   ├── css/
 │   │   ├── input.css     # Tailwind input
@@ -110,7 +97,7 @@ devops-jogja-website/
     └── yaml_loader.py    # YAML loader
 ```
 
-## 📝 Content Management
+## 📝 Manajemen konten
 
 ### Blog Posts
 
@@ -233,17 +220,17 @@ Tambahkan interaktivitas di `static/js/main.js`.
 
 ## 🚀 Deployment
 
-### Using Docker
+### Menggunakan Docker
 
 ```bash
 # Build image
 docker build -t devops-jogja-website .
 
 # Run container
-docker run -p 5000:5000 devops-jogja-website
+docker run -p 3000:3000 devops-jogja-website
 ```
 
-### Using Heroku
+### Menggunakan Heroku
 
 ```bash
 # Login to Heroku
@@ -256,12 +243,12 @@ heroku create devops-jogja-website
 git push heroku main
 ```
 
-### Using Railway
+### Menggunakan Railway
 
-1. Connect GitHub repository ke Railway
+1. Hubungkan GitHub repository ke Railway
 2. Deploy otomatis setiap push ke main branch
 
-## 🤝 Contributing
+## 🤝 Berkontribusi
 
 1. Fork repository
 2. Buat feature branch (`git checkout -b feature/amazing-feature`)
