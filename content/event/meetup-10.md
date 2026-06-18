@@ -13,28 +13,33 @@ featured_image: "meetup10.jpg"
 Dari proses build aplikasi hingga provisioning infrastruktur cloud, bagaimana cara membuat workflow DevOps yang lebih modern, efisien, dan mudah dikelola?
 Bergabunglah di Meetup DevOps Jogja #10 bersama praktisi DevOps yang akan berbagi pengalaman langsung dari dunia kerja mengenai Buildpacks dan Terragrunt.
 
-🎯 Tema
+## 🎯 Tema
 From Code to Cloud: Modern DevOps with Buildpacks & Terragrunt
 
-🎤 Session 1
+## 🎤 Session 1
 Cloud Native Buildpacks as Docker Container Build Alternative
+
 oleh **Antony Kunaifi**
 (Organizer DevOps Jogja / DevOps Engineer)
 
 Pelajari bagaimana Cloud Native Buildpacks dapat menjadi alternatif modern dalam membangun container image tanpa perlu menulis Dockerfile secara manual.
 
-🎤 Session 2
+## 🎤 Session 2
 Terragrunt: IaC Companion from Homelab to Enterprise
+
 oleh **Kholis Respati Agum Gumelar**
 (SRE / DevOps Engineer at Kloia)
 
 Mengenal Terragrunt sebagai pendamping Terraform untuk mengelola Infrastructure as Code yang lebih terstruktur, scalable, dan mudah digunakan mulai dari homelab hingga kebutuhan enterprise.
+
+## Detail Event
 
 📅 Sabtu, 27 Juni 2026
 🕐 13.00 WIB - Selesai
 📍 [Deneva Hub](https://maps.app.goo.gl/Ur7wWaFmHQv4zxz66)
 
 Jl. Rogoyudan 1 No.2, Sleman, Yogyakarta
+
 💰 Kontribusi Peserta: Rp20.000
 
 Termasuk:
@@ -44,13 +49,11 @@ Termasuk:
 
 ⚠️ Kursi Terbatas
 
-🎟 Pendaftaran: https://ngevent.devopsjogja.com/event/YFH29N
-
-💙 Acara ini didukung oleh DomaiNesia sebagai sponsor yang mendukung pertumbuhan komunitas DevOps dan Cloud Native di Yogyakarta.
+💙 Acara ini didukung oleh **DomaiNesia** sebagai sponsor yang mendukung pertumbuhan komunitas DevOps dan Cloud Native di Yogyakarta.
 
 🤝 Community Partner:
-JogjaDevs
-DevOps Focus Group 
+- JogjaDevs
+- DevOps Focus Group 
 
 Mari belajar, berdiskusi, dan memperluas networking bersama para praktisi DevOps, Cloud, SRE, Platform Engineer, mahasiswa, dan pegiat teknologi di Yogyakarta.
 
